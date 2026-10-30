@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blinkit Clone | Online Grocery Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">blink<span>it</span></a>
+
+        <div class="delivery">
+            <h4>Delivery in 17 minutes</h4>
+            <p>Meerut, Uttar Pradesh ▼</p>
+        </div>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" id="searchInput"
+                   placeholder='Search "milk", "bread", "fruits"...'>
+            <button id="clearSearch" aria-label="Clear search">×</button>
+        </div>
+
+        <button class="login-btn">Login</button>
+
+        <button class="cart-btn" id="openCart">
+            🛒 My Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <main class="container">
+
+        <!-- Main Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="offer">FRESHNESS AT YOUR DOORSTEP</span>
+                <h1>Stock up on<br>daily essentials!</h1>
+                <p>
+                    Fresh fruits, vegetables, dairy and all your
+                    daily needs delivered to your doorstep.
+                </p>
+                <a href="#products" class="shop-btn">Shop Now →</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85"
+                    alt="Fresh fruits and vegetables">
+            </div>
+        </section>
+
+        <!-- Promotional Cards -->
+        <section class="promotions">
+            <article class="promo-card pharmacy">
+                <div>
+                    <h3>Pharmacy at<br>your doorstep!</h3>
+                    <p>Everyday healthcare essentials</p>
+                    <a href="#products">Order Now →</a>
+                </div>
+                <span class="promo-emoji">💊</span>
+            </article>
+
+            <article class="promo-card pets">
+                <div>
+                    <h3>Pet care supplies<br>at your door</h3>
+                    <p>Food, treats, toys & more</p>
+                    <a href="#products">Order Now →</a>
+                </div>
+                <span class="promo-emoji">🐶</span>
+            </article>
+
+            <article class="promo-card baby">
+                <div>
+                    <h3>Baby care<br>essentials</h3>
+                    <p>Everything your baby needs</p>
+                    <a href="#products">Order Now →</a>
+                </div>
+                <span class="promo-emoji">🍼</span>
+            </article>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories-section">
+            <h2>Shop by category</h2>
+            <div class="category-grid" id="categoryGrid"></div>
+        </section>
+
+        <!-- Products -->
+        <section class="products-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <h2>Daily essentials</h2>
+                    <p>Everything you need, delivered quickly.</p>
+                </div>
+                <span class="green-text">Fresh & Fast ⚡</span>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+
+            <p id="noResults" class="no-results" hidden>
+                No products found. Try another search.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>My Cart 🛒</h2>
+            <button id="closeCart" class="close-btn"
+                    aria-label="Close cart">×</button>
+        </div>
+
+        <p class="delivery-message">
+            ⚡ Your groceries, delivered in minutes!
+        </p>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div id="emptyCart" class="empty-cart">
+            <div>🛍️</div>
+            <h3>Your cart is empty</h3>
+            <p>Add some products to get started!</p>
+            <button id="continueShopping">Start Shopping</button>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" hidden>
+            <div class="total-row">
+                <span>Subtotal</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">
+                Proceed to Checkout →
+            </button>
+            <p>Demo checkout — no payment will be processed.</p>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#" class="logo">blink<span>it</span></a>
+        <p>Fresh groceries. Fast delivery.</p>
+        <p>Student project inspired by online grocery shopping websites.</p>
+        <p>© 2026 Blinkit Clone Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
