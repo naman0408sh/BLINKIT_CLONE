@@ -1,158 +1,156 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Blinkit Clone | Online Grocery Shopping</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Blinkit Clone</title>
+    <link rel="stylesheet" href="style (1).css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">blink<span>it</span></a>
-
-        <div class="delivery">
-            <h4>Delivery in 17 minutes</h4>
-            <p>Meerut, Uttar Pradesh ▼</p>
+    <header>
+        <div class="logo">
+            <h1>blinkit</h1>
         </div>
 
-        <div class="search-box">
-            <span>⌕</span>
-            <input type="text" id="searchInput"
-                   placeholder='Search "milk", "bread", "fruits"...'>
-            <button id="clearSearch" aria-label="Clear search">×</button>
+        <div class="location">
+            <h3>Delivery in 10 minutes</h3>
+            <p>Meerut, Uttar Pradesh</p>
         </div>
 
-        <button class="login-btn">Login</button>
+        <div class="search">
+            <input type="text" placeholder="Search for products">
+        </div>
 
-        <button class="cart-btn" id="openCart">
-            🛒 My Cart <span id="cartCount">0</span>
-        </button>
+        <div class="login">
+            <button>Login</button>
+        </div>
+
+        <div class="cart">
+            <button>My Cart</button>
+        </div>
     </header>
 
-    <main class="container">
-
-        <!-- Main Banner -->
-        <section class="hero">
-            <div class="hero-content">
-                <span class="offer">FRESHNESS AT YOUR DOORSTEP</span>
-                <h1>Stock up on<br>daily essentials!</h1>
-                <p>
-                    Fresh fruits, vegetables, dairy and all your
-                    daily needs delivered to your doorstep.
-                </p>
-                <a href="#products" class="shop-btn">Shop Now →</a>
-            </div>
-
-            <div class="hero-image">
-                <img
-                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85"
-                    alt="Fresh fruits and vegetables">
-            </div>
-        </section>
-
-        <!-- Promotional Cards -->
-        <section class="promotions">
-            <article class="promo-card pharmacy">
-                <div>
-                    <h3>Pharmacy at<br>your doorstep!</h3>
-                    <p>Everyday healthcare essentials</p>
-                    <a href="#products">Order Now →</a>
-                </div>
-                <span class="promo-emoji">💊</span>
-            </article>
-
-            <article class="promo-card pets">
-                <div>
-                    <h3>Pet care supplies<br>at your door</h3>
-                    <p>Food, treats, toys & more</p>
-                    <a href="#products">Order Now →</a>
-                </div>
-                <span class="promo-emoji">🐶</span>
-            </article>
-
-            <article class="promo-card baby">
-                <div>
-                    <h3>Baby care<br>essentials</h3>
-                    <p>Everything your baby needs</p>
-                    <a href="#products">Order Now →</a>
-                </div>
-                <span class="promo-emoji">🍼</span>
-            </article>
-        </section>
-
-        <!-- Categories -->
-        <section class="categories-section">
-            <h2>Shop by category</h2>
-            <div class="category-grid" id="categoryGrid"></div>
-        </section>
-
-        <!-- Products -->
-        <section class="products-section" id="products">
-            <div class="section-heading">
-                <div>
-                    <h2>Daily essentials</h2>
-                    <p>Everything you need, delivered quickly.</p>
-                </div>
-                <span class="green-text">Fresh & Fast ⚡</span>
-            </div>
-
-            <div class="product-grid" id="productGrid"></div>
-
-            <p id="noResults" class="no-results" hidden>
-                No products found. Try another search.
-            </p>
-        </section>
-
-    </main>
-
-    <!-- Cart Sidebar -->
-    <div class="overlay" id="overlay"></div>
-
-    <aside class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h2>My Cart 🛒</h2>
-            <button id="closeCart" class="close-btn"
-                    aria-label="Close cart">×</button>
+    <!-- Main Banner -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Groceries delivered in minutes!</h1>
+            <p>Get fresh groceries and daily essentials at your doorstep.</p>
+            <button>Shop Now</button>
         </div>
 
-        <p class="delivery-message">
-            ⚡ Your groceries, delivered in minutes!
-        </p>
+        <div class="banner-image">
+            <h1>🥦 🥕 🍎</h1>
+            <h2>Fresh & Healthy</h2>
+        </div>
+    </section>
 
-        <div id="cartItems" class="cart-items"></div>
+    <!-- Offers -->
+    <h2 class="heading">Explore Our Services</h2>
 
-        <div id="emptyCart" class="empty-cart">
-            <div>🛍️</div>
-            <h3>Your cart is empty</h3>
-            <p>Add some products to get started!</p>
-            <button id="continueShopping">Start Shopping</button>
+    <section class="offers">
+
+        <div class="offer-card">
+            <h2>Pharmacy</h2>
+            <p>Medicines delivered to your home.</p>
+            <h1>💊</h1>
         </div>
 
-        <div class="cart-footer" id="cartFooter" hidden>
-            <div class="total-row">
-                <span>Subtotal</span>
-                <strong id="cartTotal">₹0</strong>
-            </div>
-            <button id="checkoutBtn" class="checkout-btn">
-                Proceed to Checkout →
-            </button>
-            <p>Demo checkout — no payment will be processed.</p>
+        <div class="offer-card">
+            <h2>Pet Care</h2>
+            <p>Everything for your lovely pets.</p>
+            <h1>🐶</h1>
         </div>
-    </aside>
+
+        <div class="offer-card">
+            <h2>Baby Care</h2>
+            <p>Products for your little ones.</p>
+            <h1>🍼</h1>
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+    <h2 class="heading">Shop by Category</h2>
+
+    <section class="categories">
+
+        <div class="category">
+            <h1>🥛</h1>
+            <p>Dairy Products</p>
+        </div>
+
+        <div class="category">
+            <h1>🍎</h1>
+            <p>Fruits</p>
+        </div>
+
+        <div class="category">
+            <h1>🥦</h1>
+            <p>Vegetables</p>
+        </div>
+
+        <div class="category">
+            <h1>🍪</h1>
+            <p>Snacks</p>
+        </div>
+
+        <div class="category">
+            <h1>🥤</h1>
+            <p>Cold Drinks</p>
+        </div>
+
+        <div class="category">
+            <h1>🍞</h1>
+            <p>Bakery</p>
+        </div>
+
+        <div class="category">
+            <h1>🍫</h1>
+            <p>Chocolates</p>
+        </div>
+
+        <div class="category">
+            <h1>🧴</h1>
+            <p>Personal Care</p>
+        </div>
+
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <a href="#" class="logo">blink<span>it</span></a>
-        <p>Fresh groceries. Fast delivery.</p>
-        <p>Student project inspired by online grocery shopping websites.</p>
-        <p>© 2026 Blinkit Clone Demo</p>
-    </footer>
+    <footer>
 
-    <script src="script.js"></script>
+        <div>
+            <h2>blinkit</h2>
+            <p>Groceries at your doorstep.</p>
+        </div>
+
+        <div>
+            <h3>Useful Links</h3>
+            <p>About Us</p>
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+        </div>
+
+        <div>
+            <h3>Categories</h3>
+            <p>Fruits & Vegetables</p>
+            <p>Snacks</p>
+            <p>Dairy Products</p>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <p>Instagram</p>
+            <p>Facebook</p>
+        </div>
+
+        <p class="copyright">
+            © 2026 Blinkit Clone. Made for college assignment.
+        </p>
+
+    </footer>
 
 </body>
 </html>
